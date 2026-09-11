@@ -4,7 +4,9 @@
 
 @section('content')
 
+    <!-- Hero Section -->
     <x-hero />
+
 
     <!-- Features Section -->
     <section id="features" class="py-24 bg-[#fffaf5]">
@@ -28,6 +30,7 @@
                 </p>
 
             </div>
+
 
             <!-- Feature Cards -->
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -74,8 +77,10 @@
 
     </section>
 
-    <!-- Product Showcase -->
+
+    <!-- Product Showcase Section -->
     <x-product-showcase />
+
 
     <!-- Pricing Section -->
     <section id="pricing" class="py-24 bg-[#fffaf5]">
@@ -100,9 +105,11 @@
 
             </div>
 
+
             <!-- Pricing Cards -->
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
+                <!-- Basic Plan -->
                 <x-pricing-card
                     name="Basic"
                     price="99"
@@ -113,6 +120,8 @@
                     ]"
                 />
 
+
+                <!-- Standard Plan -->
                 <x-pricing-card
                     name="Standard"
                     price="149"
@@ -124,6 +133,8 @@
                     featured
                 />
 
+
+                <!-- Premium Plan -->
                 <x-pricing-card
                     name="Premium"
                     price="199"
@@ -139,6 +150,7 @@
         </div>
 
     </section>
+
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="py-24 bg-white">
@@ -163,9 +175,11 @@
 
             </div>
 
+
             <!-- Testimonial Cards -->
             <div class="grid md:grid-cols-3 gap-6">
 
+                <!-- Customer 1 -->
                 <x-testimonial-card
                     image="images/customer1.png"
                     name="Customer One"
@@ -173,6 +187,8 @@
                     review="I enjoy the relaxing atmosphere and the freshly prepared coffee."
                 />
 
+
+                <!-- Customer 2 -->
                 <x-testimonial-card
                     image="images/customer2.png"
                     name="Customer Two"
@@ -180,6 +196,8 @@
                     review="A comfortable place to enjoy coffee, snacks, and time with friends."
                 />
 
+
+                <!-- Customer 3 -->
                 <x-testimonial-card
                     image="images/customer3.png"
                     name="Customer Three"
@@ -192,5 +210,68 @@
         </div>
 
     </section>
+
+
+    <!-- Call to Action Section -->
+    <section class="py-24 bg-[#2f211b] text-white">
+
+        <div class="max-w-4xl mx-auto px-6 text-center">
+
+            <p class="text-[#d6b98c] font-semibold uppercase tracking-widest mb-3">
+                Ready for Your Next Coffee?
+            </p>
+
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                Make Every Coffee Moment Better with BFC
+            </h2>
+
+            <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-10">
+                Discover your favorite drinks, enjoy a relaxing
+                coffee experience, and see what BFC Coffee Shop
+                has to offer.
+            </p>
+
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap justify-center gap-4">
+
+                <x-button
+                    href="#contact"
+                    variant="light"
+                >
+                    Register
+                </x-button>
+
+
+                <x-button
+                    href="#contact"
+                    variant="light"
+                    class="bg-transparent border border-white
+                           text-white hover:bg-white
+                           hover:text-[#2f211b]"
+                >
+                    Contact Sales
+                </x-button>
+
+
+                <x-button
+                    href="#pricing"
+                    variant="light"
+                    class="bg-transparent border border-[#d6b98c]
+                           text-[#d6b98c] hover:bg-[#d6b98c]
+                           hover:text-[#2f211b]"
+                >
+                    Start Free Trial
+                </x-button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <x-footer />
 
 @endsection
