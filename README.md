@@ -383,7 +383,7 @@ Elements such as the navigation bar, product cards, pricing cards, testimonials,
 
 ## Laptop View
 
-![Laptop View](screenshots/laptop%20(2).png)
+![Laptop View](screenshots/laptop (2).png)
 
 ## Tablet View
 
@@ -403,7 +403,7 @@ Elements such as the navigation bar, product cards, pricing cards, testimonials,
 
 ## Features Section
 
-![Features Section](screenshots/feature%20(2).png)
+![Features Section](screenshots/feature (2).png)
 
 ## Pricing Section
 
@@ -415,7 +415,7 @@ Elements such as the navigation bar, product cards, pricing cards, testimonials,
 
 ## Footer
 
-![Footer](screenshots/footer%20(2).png)
+![Footer](screenshots/footer(2).png)
 
 ## VS Code Project Structure
 
@@ -423,7 +423,7 @@ Elements such as the navigation bar, product cards, pricing cards, testimonials,
 
 ## Blade Components / Project Structure
 
-![Blade Components](screenshots/vscodestructure%20copy.png)
+![Blade Components](screenshots/vscodestructure copy.png)
 
 ## GitHub Repository
 
