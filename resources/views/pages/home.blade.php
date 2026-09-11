@@ -4,23 +4,35 @@
 
 @section('content')
 
-    <!-- Hero Section -->
+
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
     <x-hero />
 
 
-    <!-- Features Section -->
-    <section id="features" class="py-24 bg-[#fffaf5]">
+    <!-- =====================================================
+         FEATURES SECTION
+    ====================================================== -->
+    <section id="features" class="py-24 bg-[#fffaf5]" aria-labelledby="features-heading">
 
         <div class="max-w-7xl mx-auto px-6">
 
             <!-- Section Heading -->
             <div class="text-center max-w-2xl mx-auto mb-14">
 
-                <p class="text-[#8b5e3c] font-semibold uppercase tracking-widest mb-3">
+                <p class="text-[#8b5e3c]
+                          font-semibold
+                          uppercase
+                          tracking-widest
+                          mb-3">
                     Why Choose BFC
                 </p>
 
-                <h2 class="text-3xl md:text-4xl font-bold text-[#2f211b] mb-4">
+                <h2 id="features-heading" class="font-serif text-3xl md:text-4xl
+                           font-bold
+                           text-[#2f211b]
+                           mb-4">
                     Made for Coffee Lovers
                 </h2>
 
@@ -33,236 +45,361 @@
 
 
             <!-- Feature Cards -->
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                <x-feature-card
-                    icon="☕"
-                    title="Freshly Brewed Coffee"
-                    description="Enjoy freshly prepared coffee made for every order."
-                />
+                <li>
+                    <x-feature-card
+                        icon="coffee"
+                        title="Freshly Brewed Coffee"
+                        description="Enjoy freshly prepared coffee made for every order."
+                    />
+                </li>
 
-                <x-feature-card
-                    icon="🌱"
-                    title="Quality Ingredients"
-                    description="Carefully selected ingredients create flavorful drinks."
-                />
+                <li>
+                    <x-feature-card
+                        icon="leaf"
+                        title="Quality Ingredients"
+                        description="Carefully selected ingredients create flavorful drinks."
+                    />
+                </li>
 
-                <x-feature-card
-                    icon="🥐"
-                    title="Delicious Pairings"
-                    description="Enjoy snacks and treats that pair perfectly with your drink."
-                />
+                <li>
+                    <x-feature-card
+                        icon="pairing"
+                        title="Delicious Pairings"
+                        description="Enjoy snacks and treats that pair perfectly with your drink."
+                    />
+                </li>
 
-                <x-feature-card
-                    icon="🛋️"
-                    title="Cozy Atmosphere"
-                    description="A comfortable space for relaxing, studying, or catching up."
-                />
+                <li>
+                    <x-feature-card
+                        icon="cozy"
+                        title="Cozy Atmosphere"
+                        description="A comfortable space for relaxing, studying, or catching up."
+                    />
+                </li>
 
-                <x-feature-card
-                    icon="✨"
-                    title="Friendly Service"
-                    description="Welcoming service helps make every visit enjoyable."
-                />
+                <li>
+                    <x-feature-card
+                        icon="friendly"
+                        title="Friendly Service"
+                        description="Welcoming service helps make every visit enjoyable."
+                    />
+                </li>
 
-                <x-feature-card
-                    icon="💰"
-                    title="Great Value"
-                    description="Enjoy satisfying drinks and food at reasonable prices."
-                />
+                <li>
+                    <x-feature-card
+                        icon="value"
+                        title="Great Value"
+                        description="Enjoy satisfying drinks and food at reasonable prices."
+                    />
+                </li>
 
-            </div>
+            </ul>
 
         </div>
 
     </section>
 
 
-    <!-- Product Showcase Section -->
+    <!-- =====================================================
+         PRODUCT SHOWCASE
+    ====================================================== -->
     <x-product-showcase />
 
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-24 bg-[#fffaf5]">
+    <!-- =====================================================
+         PRICING / COFFEE PACKAGES
+    ====================================================== -->
+    <section id="pricing" class="py-24 bg-[#fffaf5]" aria-labelledby="pricing-heading">
 
         <div class="max-w-7xl mx-auto px-6">
 
-            <!-- Section Heading -->
+            <!-- Heading -->
             <div class="text-center max-w-2xl mx-auto mb-14">
 
-                <p class="text-[#8b5e3c] font-semibold uppercase tracking-widest mb-3">
-                    Pricing Plans
+                <p class="text-[#8b5e3c]
+                          font-semibold
+                          uppercase
+                          tracking-widest
+                          mb-3">
+                    Coffee Packages
                 </p>
 
-                <h2 class="text-3xl md:text-4xl font-bold text-[#2f211b] mb-4">
-                    Choose Your Perfect Plan
+                <h2 id="pricing-heading" class="font-serif text-3xl md:text-4xl
+                           font-bold
+                           text-[#2f211b]
+                           mb-4">
+                    Choose Your Coffee Experience
                 </h2>
 
                 <p class="text-gray-600">
-                    Select a plan that fits your coffee needs
-                    and enjoy the BFC Coffee Shop experience.
+                    Explore sample coffee packages designed for
+                    different coffee moments and preferences.
                 </p>
 
             </div>
 
 
             <!-- Pricing Cards -->
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ul class="grid md:grid-cols-3 gap-8">
 
-                <!-- Basic Plan -->
-                <x-pricing-card
-                    name="Basic"
-                    price="99"
-                    :features="[
-                        '1 Coffee per Day',
-                        'Access to Wi-Fi',
-                        'Friendly Service'
-                    ]"
-                />
-
-
-                <!-- Standard Plan -->
-                <x-pricing-card
-                    name="Standard"
-                    price="149"
-                    :features="[
-                        '2 Coffees per Day',
-                        'Access to Wi-Fi',
-                        'Delicious Snacks'
-                    ]"
-                    featured
-                />
+                <!-- Solo Coffee -->
+                <li>
+                    <x-pricing-card
+                        name="Solo Coffee"
+                        price="119"
+                        :features="[
+                            '1 Featured Coffee Drink',
+                            'Choice of Hot or Iced',
+                            'Perfect for Individual Orders'
+                        ]"
+                    />
+                </li>
 
 
-                <!-- Premium Plan -->
-                <x-pricing-card
-                    name="Premium"
-                    price="199"
-                    :features="[
-                        'Unlimited Coffee',
-                        'Access to Wi-Fi',
-                        'Exclusive Offers'
-                    ]"
-                />
+                <!-- Coffee + Snack -->
+                <li>
+                    <x-pricing-card
+                        name="Coffee + Snack"
+                        price="169"
+                        :features="[
+                            '1 Featured Coffee Drink',
+                            '1 Selected Snack',
+                            'Great for Coffee Breaks'
+                        ]"
+                        featured
+                    />
+                </li>
 
-            </div>
+
+                <!-- BFC Bundle -->
+                <li>
+                    <x-pricing-card
+                        name="BFC Bundle"
+                        price="229"
+                        :features="[
+                            '2 Featured Drinks',
+                            '1 Selected Snack',
+                            'Perfect for Sharing'
+                        ]"
+                    />
+                </li>
+
+            </ul>
+
+
+            <!-- Pricing Note -->
+            <p class="text-center text-sm text-gray-500 mt-8">
+                Sample pricing created for this academic landing page project.
+            </p>
 
         </div>
 
     </section>
 
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-24 bg-white">
+    <!-- =====================================================
+         TESTIMONIALS / CUSTOMER REVIEWS
+    ====================================================== -->
+    <section id="testimonials" class="py-24 bg-white" aria-labelledby="testimonials-heading">
 
         <div class="max-w-7xl mx-auto px-6">
 
-            <!-- Section Heading -->
+            <!-- Heading -->
             <div class="text-center max-w-2xl mx-auto mb-14">
 
-                <p class="text-[#8b5e3c] font-semibold uppercase tracking-widest mb-3">
-                    Testimonials
+                <p class="text-[#8b5e3c]
+                          font-semibold
+                          uppercase
+                          tracking-widest
+                          mb-3">
+                    Customer Reviews
                 </p>
 
-                <h2 class="text-3xl md:text-4xl font-bold text-[#2f211b] mb-4">
-                    What Our Customers Say
+                <h2 id="testimonials-heading" class="font-serif text-3xl md:text-4xl
+                           font-bold
+                           text-[#2f211b]
+                           mb-4">
+                    What Customers Say About BFC
                 </h2>
 
                 <p class="text-gray-600">
-                    See what customers love about their
+                    Real customer feedback about their
                     BFC Coffee Shop experience.
                 </p>
 
             </div>
 
 
-            <!-- Testimonial Cards -->
-            <div class="grid md:grid-cols-3 gap-6">
+            <!-- Reviews -->
+            <ul class="grid md:grid-cols-3 gap-8">
 
-                <!-- Customer 1 -->
-                <x-testimonial-card
-                    image="images/customer1.png"
-                    name="Customer One"
-                    position="Regular Customer"
-                    review="I enjoy the relaxing atmosphere and the freshly prepared coffee."
-                />
-
-
-                <!-- Customer 2 -->
-                <x-testimonial-card
-                    image="images/customer2.png"
-                    name="Customer Two"
-                    position="Coffee Lover"
-                    review="A comfortable place to enjoy coffee, snacks, and time with friends."
-                />
+                <!-- Emmanuel -->
+                <li>
+                    <x-testimonial-card
+                        image="images/customer1.png"
+                        name="Emmanuel Canlas"
+                        position="Local Guide"
+                        review="On our way back to Manila we came across this coffee shop in an obscure gas station by the side of the road. They have the beat iced coffee! Auro Iced coffee!!"
+                    />
+                </li>
 
 
-                <!-- Customer 3 -->
-                <x-testimonial-card
-                    image="images/customer3.png"
-                    name="Customer Three"
-                    position="Regular Customer"
-                    review="The friendly service and enjoyable coffee experience keep me coming back."
-                />
+                <!-- Jorinda -->
+                <li>
+                    <x-testimonial-card
+                        image="images/customer3.png"
+                        name="Jorinda Guiron"
+                        position="Local Guide"
+                        review="Great taste😍...the coffee and the foods luv it 💕. nice ambience, a cozy place 👌"
+                    />
+                </li>
 
-            </div>
+
+                <!-- Ann Katherine -->
+                <li>
+                    <x-testimonial-card
+                        image="images/customer2.png"
+                        name="Ann Katherine Reyes"
+                        position="Customer"
+                        review="BFC has a warm and inviting ambiance, Best coffee we've had🥰"
+                    />
+                </li>
+
+            </ul>
+
+
+            <!-- Source Note -->
+            <p class="text-center text-sm text-gray-500 mt-8">
+                Reviews adapted from publicly posted customer feedback.
+            </p>
 
         </div>
 
     </section>
 
 
-    <!-- Call to Action Section -->
-    <section class="py-24 bg-[#2f211b] text-white">
+    <!-- =====================================================
+         CALL TO ACTION
+    ====================================================== -->
+    <section class="relative py-24
+                    bg-[#2f211b]
+                    text-white
+                    overflow-hidden"
+              aria-labelledby="cta-heading">
 
-        <div class="max-w-4xl mx-auto px-6 text-center">
 
-            <p class="text-[#d6b98c] font-semibold uppercase tracking-widest mb-3">
+        <!-- Background Decoration -->
+        <div aria-hidden="true" class="absolute -top-24 -left-24
+                    w-72 h-72
+                    bg-[#8b5e3c]/30
+                    rounded-full
+                    blur-3xl">
+        </div>
+
+
+        <div aria-hidden="true" class="absolute -bottom-32 -right-24
+                    w-96 h-96
+                    bg-[#d6b98c]/20
+                    rounded-full
+                    blur-3xl">
+        </div>
+
+
+        <!-- CTA Content -->
+        <div class="relative z-10
+                    max-w-4xl mx-auto
+                    px-6 text-center">
+
+            <p class="text-[#d6b98c]
+                      font-semibold
+                      uppercase
+                      tracking-widest
+                      mb-4">
                 Ready for Your Next Coffee?
             </p>
 
-            <h2 class="text-3xl md:text-5xl font-bold mb-6">
-                Make Every Coffee Moment Better with BFC
+
+            <h2 id="cta-heading" class="font-serif text-3xl sm:text-4xl md:text-5xl
+                       font-bold
+                       leading-tight
+                       mb-6">
+                Discover Your Next Favorite Drink at BFC
             </h2>
 
-            <p class="text-gray-300 text-lg max-w-2xl mx-auto mb-10">
-                Discover your favorite drinks, enjoy a relaxing
-                coffee experience, and see what BFC Coffee Shop
-                has to offer.
+
+            <p class="text-white/70
+                      text-lg
+                      leading-relaxed
+                      max-w-2xl
+                      mx-auto
+                      mb-10">
+                Explore BFC Coffee Shop's featured drinks,
+                enjoy a relaxing coffee experience, and find
+                the perfect drink for your next coffee moment.
             </p>
 
 
-            <!-- CTA Buttons -->
-            <div class="flex flex-wrap justify-center gap-4">
+            <!-- CTA Buttons: primary action, secondary action, tertiary link -->
+            <div class="flex flex-col sm:flex-row
+                        justify-center
+                        items-center
+                        gap-5">
 
-                <x-button
+
+                <!-- Primary: Explore Drinks -->
+                <a
+                    href="#showcase"
+                    class="w-full sm:w-auto
+                           px-8 py-3.5
+                           bg-[#d6b98c]
+                           text-[#2f211b]
+                           rounded-xl
+                           font-semibold
+                           shadow-[0_12px_28px_-12px_rgba(214,185,140,0.5)]
+                           hover:bg-white
+                           hover:-translate-y-0.5
+                           transition duration-300"
+                >
+                    Explore Our Drinks
+                </a>
+
+
+                <!-- Secondary: Visit BFC (links out to Google Maps — replace with your actual location URL) -->
+                <a
+                    href="https://maps.google.com/?q=BFC+Coffee+Shop"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="w-full sm:w-auto
+                           px-8 py-3.5
+                           border border-white/40
+                           text-white
+                           rounded-xl
+                           font-semibold
+                           hover:border-white
+                           hover:bg-white/5
+                           hover:-translate-y-0.5
+                           transition duration-300"
+                >
+                    Visit BFC
+                </a>
+
+
+                <!-- Tertiary: Contact, styled as a plain link so it doesn't compete with the two buttons above.
+                     NOTE: no section with id="contact" exists on this page yet — add one, or point this
+                     at your actual contact page/route, or the link will go nowhere. -->
+                <a
                     href="#contact"
-                    variant="light"
+                    class="text-[#d6b98c]
+                           font-semibold
+                           underline underline-offset-4
+                           decoration-[#d6b98c]/40
+                           hover:decoration-[#d6b98c]
+                           transition duration-300"
                 >
-                    Register
-                </x-button>
-
-
-                <x-button
-                    href="#contact"
-                    variant="light"
-                    class="bg-transparent border border-white
-                           text-white hover:bg-white
-                           hover:text-[#2f211b]"
-                >
-                    Contact Sales
-                </x-button>
-
-
-                <x-button
-                    href="#pricing"
-                    variant="light"
-                    class="bg-transparent border border-[#d6b98c]
-                           text-[#d6b98c] hover:bg-[#d6b98c]
-                           hover:text-[#2f211b]"
-                >
-                    Start Free Trial
-                </x-button>
+                    Contact Us
+                </a>
 
             </div>
 
@@ -271,7 +408,10 @@
     </section>
 
 
-    <!-- Footer -->
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
     <x-footer />
+
 
 @endsection
