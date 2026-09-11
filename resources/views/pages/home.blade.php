@@ -14,13 +14,11 @@
             <!-- Section Heading -->
             <div class="text-center max-w-2xl mx-auto mb-14">
 
-                <p class="text-[#8b5e3c] font-semibold uppercase
-                          tracking-widest mb-3">
+                <p class="text-[#8b5e3c] font-semibold uppercase tracking-widest mb-3">
                     Why Choose BFC
                 </p>
 
-                <h2 class="text-3xl md:text-4xl font-bold
-                           text-[#2f211b] mb-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#2f211b] mb-4">
                     Made for Coffee Lovers
                 </h2>
 
@@ -78,5 +76,121 @@
 
     <!-- Product Showcase -->
     <x-product-showcase />
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 bg-[#fffaf5]">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Section Heading -->
+            <div class="text-center max-w-2xl mx-auto mb-14">
+
+                <p class="text-[#8b5e3c] font-semibold uppercase tracking-widest mb-3">
+                    Pricing Plans
+                </p>
+
+                <h2 class="text-3xl md:text-4xl font-bold text-[#2f211b] mb-4">
+                    Choose Your Perfect Plan
+                </h2>
+
+                <p class="text-gray-600">
+                    Select a plan that fits your coffee needs
+                    and enjoy the BFC Coffee Shop experience.
+                </p>
+
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <x-pricing-card
+                    name="Basic"
+                    price="99"
+                    :features="[
+                        '1 Coffee per Day',
+                        'Access to Wi-Fi',
+                        'Friendly Service'
+                    ]"
+                />
+
+                <x-pricing-card
+                    name="Standard"
+                    price="149"
+                    :features="[
+                        '2 Coffees per Day',
+                        'Access to Wi-Fi',
+                        'Delicious Snacks'
+                    ]"
+                    featured
+                />
+
+                <x-pricing-card
+                    name="Premium"
+                    price="199"
+                    :features="[
+                        'Unlimited Coffee',
+                        'Access to Wi-Fi',
+                        'Exclusive Offers'
+                    ]"
+                />
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 bg-white">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Section Heading -->
+            <div class="text-center max-w-2xl mx-auto mb-14">
+
+                <p class="text-[#8b5e3c] font-semibold uppercase tracking-widest mb-3">
+                    Testimonials
+                </p>
+
+                <h2 class="text-3xl md:text-4xl font-bold text-[#2f211b] mb-4">
+                    What Our Customers Say
+                </h2>
+
+                <p class="text-gray-600">
+                    See what customers love about their
+                    BFC Coffee Shop experience.
+                </p>
+
+            </div>
+
+            <!-- Testimonial Cards -->
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <x-testimonial-card
+                    image="images/customer1.png"
+                    name="Customer One"
+                    position="Regular Customer"
+                    review="I enjoy the relaxing atmosphere and the freshly prepared coffee."
+                />
+
+                <x-testimonial-card
+                    image="images/customer2.png"
+                    name="Customer Two"
+                    position="Coffee Lover"
+                    review="A comfortable place to enjoy coffee, snacks, and time with friends."
+                />
+
+                <x-testimonial-card
+                    image="images/customer3.png"
+                    name="Customer Three"
+                    position="Regular Customer"
+                    review="The friendly service and enjoyable coffee experience keep me coming back."
+                />
+
+            </div>
+
+        </div>
+
+    </section>
 
 @endsection
