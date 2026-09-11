@@ -11,6 +11,8 @@
 
 <body class="bg-white text-gray-900">
 
+    <x-navbar />
+
     <main>
         @yield('content')
     </main>

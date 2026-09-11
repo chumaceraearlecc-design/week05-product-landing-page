@@ -1,8 +1,11 @@
 @extends('layouts.app')
 
-@section('title', 'Home')
+@section('title', 'BFC Coffee Shop')
 
 @section('content')
+
+
+    <x-hero />
 
     <div class="min-h-screen flex items-center justify-center bg-gray-100">
 
