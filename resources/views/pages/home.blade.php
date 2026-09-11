@@ -76,4 +76,7 @@
 
     </section>
 
+    <!-- Product Showcase -->
+    <x-product-showcase />
+
 @endsection
